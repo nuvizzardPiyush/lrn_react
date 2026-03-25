@@ -1,0 +1,6 @@
+package.json
+ every Node JS project has a package.json and it contains info about project, for example list of dependencies and scripts
+
+package-lock.json
+ snapshot of entire dependency tree
+
