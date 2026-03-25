@@ -4,3 +4,4 @@ package.json
 package-lock.json
  snapshot of entire dependency tree
 
+to create component we create a function(name starting with capital alphabet) which return html. adn we export the component
