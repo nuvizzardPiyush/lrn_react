@@ -1,1 +1,21 @@
 LINK to course : https://www.youtube.com/watch?v=dCLhUialKPQ
+
+->  useState to define the variable for a reactComponent ->
+        const [stateVariableName, nameOfSetterForVariable] = useState(defaultValue)
+
+->  useEffect to define the behaviour on mounting of the Component
+
+        useEffect( () => {                          // 1. EFFECT LOGIC (runs after render)
+                                                        // optional: return cleanup function
+            return () => {                          // 2. CLEANUP LOGIC (runs before next effect or on unmount)
+            };
+        }, [dep1, dep2, dep3]);                     // 3. DEPENDENCY ARRAY
+
+-> My Effect runs twice when the component mounts
+   When Strict Mode is on, in development, React runs setup and cleanup one extra time before the actual setup.
+   This is a stress-test that verifies your Effect's logic is implemented correctly!
+   If this causes visible issues, your cleanup function is missing some logic.
+   The cleanup function should stop or undo whatever the setup function was doing.
+   The rule of thumb is that the user shouldn't be able to distinguish between the setup being called once
+   (as in production) and a setup → cleanup → setup sequence (as in development).
+
